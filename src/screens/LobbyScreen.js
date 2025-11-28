@@ -15,4 +15,44 @@ export default function LobbyScreen({ navigate }) {
 
       <View style={styles.buttons}>
         <PrimaryButton label="🎰 Play Slots" onPress={() => navigate('SLOT')} />
-        <PrimaryButton
+        <PrimaryButton label="🛒 Shop" onPress={() => navigate('SHOP')} />
+        <PrimaryButton label="🎁 Daily Bonus" onPress={() => navigate('BONUS')} />
+        <PrimaryButton label="🏆 Leaderboard" onPress={() => navigate('LEADERBOARD')} />
+        <PrimaryButton label="⚙️ Settings" onPress={() => navigate('SETTINGS')} />
+      </View>
+
+      <Text style={styles.tip}>
+        Tip: VIP players earn +5% on every winning spin.
+      </Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#121212',
+    padding: 16,
+    alignItems: 'center'
+  },
+  title: {
+    fontSize: 26,
+    fontWeight: '800',
+    color: '#f5b300',
+    marginTop: 20
+  },
+  subtitle: {
+    color: '#fff',
+    marginTop: 6
+  },
+  buttons: {
+    marginTop: 24,
+    width: '80%'
+  },
+  tip: {
+    color: '#aaa',
+    fontSize: 12,
+    marginTop: 30,
+    textAlign: 'center'
+  }
+});
